@@ -1,6 +1,4 @@
-===============================================================
 ESCÁNER DE RED - Aplicación de Captura y Análisis de Tráfico
-===============================================================
 
 Esta herramienta permite capturar paquetes IP en tiempo real en tu red local
 y generar un resumen automático en pantalla y en un archivo ".txt", con
