@@ -102,15 +102,15 @@ REQUISITO - tener instalado sqlite3 en el equipo
 4. Realizar consultas SQL, por ejemplo:
 
    - Ver todos los paquetes:
-     SELECT * FROM paquetes;
+     - SELECT * FROM paquetes;
      
 
    - Contar paquetes por protocolo:
-     SELECT protocolo, COUNT(*) FROM paquetes GROUP BY protocolo;
+     - SELECT protocolo, COUNT(*) FROM paquetes GROUP BY protocolo;
      
 
    - Ver los 10 paquetes más grandes:
-     SELECT * FROM paquetes ORDER BY tamano DESC LIMIT 10;
+     - SELECT * FROM paquetes ORDER BY tamano DESC LIMIT 10;
 
 5. Para salir del cliente SQLite:
    .exit
