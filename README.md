@@ -56,7 +56,7 @@ REQUISITOS POR SISTEMA OPERATIVO
 	  - $ python3 --version
 
 2. Instalar Scapy:
-	  - $ pip install scapy
+	  - $ pip install scapy (utilizar el gestor de paquetes según tu distribución de linux)
 
 3. Ejecutar el script como superusuario:
 	  - $ sudo python3 network_scanning_app.py
@@ -79,3 +79,38 @@ REQUISITOS POR SISTEMA OPERATIVO
 	  - $ sudo python3 network_scanning_app.py
 
 6. Al finalizar (Ctrl+C), se generará un archivo ".txt" con el resumen
+
+
+CONSULTAR LA BASE DE DATOS (paquetes.db)
+---------------------------------------------------------------
+Todos los paquetes capturados se almacenan automáticamente en una base de datos
+local llamada "paquetes.db", utilizando SQLite. Esto permite hacer consultas,
+análisis posteriores o visualizar la información capturada con herramientas externas.
+
+REQUISITO - tener instalado sqlite3 en el equipo
+
+1. Abrir una terminal (cmd, PowerShell, bash, etc.)
+2. Ir a la carpeta donde está "paquetes.db"
+3. Ingresar al cliente SQLite:
+
+   En Windows:
+   > sqlite3 paquetes.db
+
+   En Linux/macOS:
+   $ sqlite3 paquetes.db
+
+4. Realizar consultas SQL, por ejemplo:
+
+   - Ver todos los paquetes:
+     SELECT * FROM paquetes;
+     
+
+   - Contar paquetes por protocolo:
+     SELECT protocolo, COUNT(*) FROM paquetes GROUP BY protocolo;
+     
+
+   - Ver los 10 paquetes más grandes:
+     SELECT * FROM paquetes ORDER BY tamano DESC LIMIT 10;
+
+5. Para salir del cliente SQLite:
+   .exit
